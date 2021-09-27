@@ -38,3 +38,5 @@ class BezierCurve2{
     return point;
   }
 }
+
+export { BezierCurve2 as BezierCurve };
