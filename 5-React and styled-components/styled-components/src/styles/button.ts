@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
 export const Button = styled.button`
-    background-color: pink;
-    border: none;
+    border: powderblue 1px solid;
     cursor: pointer;
-    font-weight: bold;
     font-size: 12px;
-    height: 20px;
+    height: 30px;
     width: 100px;
     border-radius: 3px;
+    margin-right: 5px;
+    font-family: system-ui;
 `;
