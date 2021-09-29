@@ -19,11 +19,9 @@ class BezierCurve2{
   order: number;
   points: Point[];
 
-  constructor(order: number, init: Point, finish: Point, control: Point[]) {
-    if(order+1 !== control.length+2) throw new Error('Incorrect number of control points');
-    this.order = order;
-    let points: Point[] = [];
-    this.points = points.concat([init], control, [finish]);
+  constructor(points: Point[]) {
+    this.order = points.length-1;
+    this.points = points
   }
  
   eval(t: number) {
@@ -39,4 +37,4 @@ class BezierCurve2{
   }
 }
 
-export { BezierCurve2 as BezierCurve };
+export { BezierCurve2 as BezierCurve};
