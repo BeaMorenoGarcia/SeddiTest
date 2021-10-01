@@ -12,14 +12,14 @@ class Body extends React.Component {
     const items = []
   
     while (counter<=val) {
-      items.push(<Label key={counter}>Colection {counter} <Input type="checkbox"></Input></Label>)
+      items.push(<div className={'option'}><Label key={counter}>Collection {counter} </Label><Input type="checkbox"></Input></div>)
       counter++;
     }
     
     return (
       <>
-      <Title>Copy to...</Title>
       <ModalBody>
+        <div className={'option'}><Label key='0'>New Collection</Label><Input type="checkbox"></Input></div>
         {items}
       </ModalBody>
       </>

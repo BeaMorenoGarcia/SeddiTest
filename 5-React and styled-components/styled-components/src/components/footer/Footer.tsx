@@ -3,10 +3,7 @@ import { Button } from '../../styles/button';
 
 const Footer:React.FC = ()=> (
   <> 
-  <div style={{height: "10%",
-    position: "absolute",
-    bottom: "-4px",
-    right: "10px",}}>
+  <div className = {'footer'}>
       <Button>Cancel</Button>
       <Button>Submit</Button>
   </div>
