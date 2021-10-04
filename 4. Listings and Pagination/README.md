@@ -1,9 +1,18 @@
-# 2. Reactive Components
+# 4. Listings and Pagination
 
-In this case, being two sibling components that share information, it is necessary to have a parent component that controls the flow.
+In front, to check if the scroll is on the bottom, we use the window event "scroll", to which we will add a listener with a callback function that will be launched every time the user scrolls the page.
+```
+var counter = 0;
+const onScroll = () => {
+ if (document.body.scrollHeight - window.innerHeight === window.scrollY) {
+   //call the API method
+   service.post(counter, params)
+   counter++;
+  }
+}
 
-![Sibbling Components](/2.%20Reactive%20Components/sibbling-components.gif)
+window.addEventListener('scroll', onScroll)
+```
+In the function onScroll, we compare if the height of the window element minus the total height of the window is equal to the "y" position of the scroll and then we call to the service with the params and the counter.
 
-The parent component is the one that controls where the information goes, depending on which component sends it. If the Child One Component changes the information of the output variable, it fires an event that is listened to by the Parent Component, , which changes the value of the variable to which the Child Two Component's observable subscribes. 
-
-The flow from the other component would be the same.
+In back, we receive 
