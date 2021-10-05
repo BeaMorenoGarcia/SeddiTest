@@ -1,7 +1,6 @@
 import React from 'react';
-import { Input } from '../../styles/input'
+import { Checkbox } from '../../styles/input'
 import { ModalBody } from '../../styles/modal-body'
-import { Title } from '../../styles/title';
 import { Label } from '../../styles/label';
 
 class Body extends React.Component {
@@ -12,14 +11,14 @@ class Body extends React.Component {
     const items = []
   
     while (counter<=val) {
-      items.push(<div className={'option'}><Label key={counter}>Collection {counter} </Label><Input type="checkbox"></Input></div>)
+      items.push(<div className={'option'} key={counter}><Label>Collection {counter} </Label><Checkbox type="checkbox"></Checkbox></div>)
       counter++;
     }
     
     return (
       <>
+      <div className={'first-option'} key="0"><Label>New Collection</Label><Checkbox type="checkbox"></Checkbox></div>
       <ModalBody>
-        <div className={'option'}><Label key='0'>New Collection</Label><Input type="checkbox"></Input></div>
         {items}
       </ModalBody>
       </>

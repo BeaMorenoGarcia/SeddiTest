@@ -4,8 +4,8 @@ import { Button } from '../../styles/button';
 const Footer:React.FC = ()=> (
   <> 
   <div className = {'footer'}>
-      <Button>Cancel</Button>
-      <Button>Submit</Button>
+      <Button color = "grey">Cancel</Button>
+      <Button color = "rgb(0,206,205)">Submit</Button>
   </div>
 
   </>

@@ -7,5 +7,4 @@ export const ModalHeader = styled.div`
     text-align: center;
     position: absolute;
     top: 0;
-    margin: 0.5em;
 `;

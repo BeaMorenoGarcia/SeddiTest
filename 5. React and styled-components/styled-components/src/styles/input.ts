@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Input = styled.input`
+export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
     position: absolute;
     right: 15px;
     width: 30px;

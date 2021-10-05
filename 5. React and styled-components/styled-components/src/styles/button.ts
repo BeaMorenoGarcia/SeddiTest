@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
 export const Button = styled.button`
-    border: powderblue 2px solid;
+    border: 2px solid ${props => 
+        props.color ? props.color : 'black'};
     background-color: transparent;
-    color: powderblue;
+    color: ${props => 
+        props.color ? props.color : 'black'};
     cursor: pointer;
     font-size: 14px;
     height: 35px;
@@ -11,4 +13,10 @@ export const Button = styled.button`
     border-radius: 3px;
     margin-right: 5px;
     font-family: system-ui;
+
+    &:hover {
+        background-color: ${props => 
+            props.color ? props.color : 'black'};
+        color: white;
+    }
 `;

@@ -13,10 +13,10 @@ div#root {
     background-color: rgb(0,0,0,0.4);
 }
 
-div.footer{
+div.footer {
     height: 10%;
     position: absolute;
-    bottom: -2%;
+    bottom: 0%;
     right: 10px;
     width: 100%;
     text-align: end;
@@ -24,9 +24,37 @@ div.footer{
 div.option {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 20px);
+    padding-left: 20px;
 }
 
 div.option:hover {
-    background-color: powderblue;
+    background-color: rgb(0,206,205, 0.4);
+}
+
+div.first-option {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    width: calc(100% - 35px);
+    align-items: center;
+    height: 11%;
+    border-bottom: 1px solid grey;
+    padding-right: 15px;
+    padding-left: 20px;
+}
+
+
+div.first-option:hover {
+    background-color: rgb(0,206,205, 0.4);
+}
+
+div.first-option > label {
+    display: flex;
+    width: calc(100% - 84px);
+}
+
+div.first-option > input {
+    position: unset;
+    display: flex;
 }
