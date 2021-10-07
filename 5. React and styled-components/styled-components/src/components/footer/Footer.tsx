@@ -7,7 +7,6 @@ const Footer:React.FC = ()=> (
       <Button color = "grey">Cancel</Button>
       <Button color = "rgb(0,206,205)">Submit</Button>
   </div>
-
   </>
 )
 
