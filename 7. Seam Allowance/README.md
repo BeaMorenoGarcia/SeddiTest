@@ -33,7 +33,20 @@ Una vez tuve esto, pensé que no siempre todas las figuras van a estar definidas
 - Para traslaciones sobre el eje x, sería: ```g(x) = f(x) + k``` donde:
   - f(x) es la función que define la figura inicial
   - k es la diferencia de la coordenada x
-- Para traslaciones sobre el eje y, sería: ```g(x) = f(x + k)``` donde:
+- Para traslaciones sobre el eje y, sería: ```g(x) = f(x + h)``` donde:
   - f(x) es la función que define la figura inicial
-  - k es la diferencia de la coordenada y
+  - h es la diferencia de la coordenada y
+
+Para la función final, realizaremos primero la traslación sobre el eje x y luego sobre el y: ```g(x) = f(x+h) + k```
+
+Una vez hecho esto, pensé que al calcular el centroide modificando los bordes de la figura inicial (los transformo todos en rectas que pasan por los puntos de corte de las funciones), podía no estar calculando correctamente los centroides de las figuras definidas por funciones no lineales. En estas, sus centroides se calculan por integración:
+
+![image](https://user-images.githubusercontent.com/62429039/136408760-3c8e8b25-626e-4843-a9c4-293627fd2243.png)
+
+donde:
+- A es el área de la región definida.
+- x es el módulo de la diferencia de funciones en el eje x
+- y es el módulo de la diferencia de funciones en el eje y
+
+Os dejo un enlace con un ejemplo explicado del cálculo: https://sjnavarro.files.wordpress.com/2008/08/centroides-e-inercia.pdf
 
