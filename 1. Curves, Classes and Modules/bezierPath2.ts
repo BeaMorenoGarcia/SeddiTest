@@ -1,15 +1,18 @@
 import { BezierCurve } from "./bezierCurve2";
+import { Point } from "./point";
 
 class BezierPath2 {
-    curves: BezierCurve[];
+    points: Point[];
 
-    constructor (curves: BezierCurve[]) {
-        this.curves = curves;
+    constructor (points: Point[]) {
+        this.points = points;
     }
 
-    getSegment(index: number) {
-        return this.curves[index];
+    getSegment(index: number, init?: number) {
+        if(!init) init = 0;
+        if(init + index > this.points.length) throw new Error('Parámetros no válidos')
+        return new BezierCurve(this.points.slice(init, init+index));
     }
 }
 
-export {BezierPath2 as BezierPath}
+export { BezierPath2 as BezierPath }
