@@ -25,7 +25,7 @@ La operación de realizar un escalado respecto a un centro, se llama homotecia y
 - C es el centro de homotecia, en nuestro caso será el centroide de la figura.
 
 Como parámetro de entrada del algoritmo, no será el valor de la razón de homotecia, sino la distancia que debe haber entre la figura original y la resultante (el tamaño del borde), por lo que hay que calcular el valor de la razón a partir de la misma. Sabiendo que la distancia de un punto P' en la homotecia al centro es: ```CP' = k*CP``` y sabiendo que la distacia del centro a cualquier vértice P es la misma obtenemos que ```k = (d-CP)/CP``` donde:
-- CP es la distancia entre el centro C y un vertice P de la figura: ```CP = sqrt((Px-Cx)^2 + (Py-Cy)^2).
+- CP es la distancia entre el centro C y un vertice P de la figura: ```CP = sqrt((Px-Cx)^2 + (Py-Cy)^2)```
 - d es la distancia entre las figuras: ```d = CP' - CP```
 
 Me di cuenta al implementarlo gráficamente (dejo los archivos .html y js) que esta operación funcionaba solamente con polígonos convexos, ya que en un polígono cóncavo el cálculo del centroide no es tan trivial y puede ser un punto que se encuentre fuera de la figura. Se tiene que calcular dividiendo la figura en otras más sencillas (triángulos) y calculando sus respectivos centroides de la siguiente forma:
