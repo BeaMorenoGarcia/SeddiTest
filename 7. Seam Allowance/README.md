@@ -33,7 +33,7 @@ Once the centroid is got, the next steps would be:
 >2. ```P2 = kI x P'``` 
 >3. ```P' = P2 + C```
 
-The operation of making an scale factor from a center, it is an homothecy and it is calculated by the matrix operation ```P' = kxP+(1-k)xC``` where;
+The operation of making an scale factor from a center, it is an homothecy and it is calculated by the matrix operation ```P' = kxP + (1-k)xC``` where;
 - P is a figure's apex
 - k is the homothecy ratio, with k>1 so the size increases.
 - I is the identity matrix.
