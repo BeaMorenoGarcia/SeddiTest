@@ -33,9 +33,9 @@ Once the centroid is got, the next steps would be:
 >2. ```P2 = kI x P'``` 
 >3. ```P' = P2 + C```
 
-The operation of making an scale factor from a center, it is an homotecy and it is calculated by the matrix operation ```P' = kxP+(1-k)xC``` where;
+The operation of making an scale factor from a center, it is an homothecy and it is calculated by the matrix operation ```P' = kxP+(1-k)xC``` where;
 - P is a figure's apex
-- k is the homotecy ratio, with k>1 so the size increases.
+- k is the homothecy ratio, with k>1 so the size increases.
 - I is the identity matrix.
 >La operación de realizar un escalado respecto a un centro, se llama homotecia y se calcula mediante la operación matricial: ```P' = kxP+(1-k)xC``` donde:
 >- P es un vértice de la figura.
@@ -43,7 +43,7 @@ The operation of making an scale factor from a center, it is an homotecy and it 
 >- I  es la matriz identidad.
 >- C es el centro de homotecia, en nuestro caso será el centroide de la figura.
 
-As an input parameter of the algorithm, it will not be the value of the homothecy ratio, but the distance that must exist between the original figure and the resulting one (the size of the border), so the value of the ratio must be calculated from the same. Knowing the distance from a point P' in the homotecy to the center is ```CP' = k*CP``` and the distance from the center to any apex will be the same we have ```k = (d-CP)/CP``` where:
+As an input parameter of the algorithm, it will not be the value of the homothecy ratio, but the distance that must exist between the original figure and the resulting one (the size of the border), so the value of the ratio must be calculated from the same. Knowing the distance from a point P' in the homothecy to the center is ```CP' = k*CP``` and the distance from the center to any apex will be the same we have ```k = (d-CP)/CP``` where:
 - CP is the distance between the center C and a figure's apex P: ```CP = sqrt((Px-Cx)^2 + (Py-Cy)^2)```
 - d is the distance between the figures: ```d = CP' - CP```
 
@@ -111,7 +111,7 @@ Finally, the algorithm that I propose would be:
 Let F be the region defined by the functions f(x), g(x)...:
 - The intersection points are calculated by equating them.
 - The centroid is calculated.
-- The homotecy ratio is calculated from the distance d: ```k = (d-CP)/CP```
+- The homothecy ratio is calculated from the distance d: ```k = (d-CP)/CP```
 - The homothecy is calculated: ```P' = kxP+(1-k)xC```
 - The X and Y values of the vertices and the vertices of the homothecy are calculated: ```X = (P'x-P''x), Y = (P'y - Py)```
 - The new functions are obtained by the composition of functions of the translations: ```g(x) = f(x+Y) + X```
@@ -120,7 +120,8 @@ Let F be the region defined by the functions f(x), g(x)...:
 >- Calculamos los puntos de intersección entre ellas igualándolas
 >- Calculamos su centroide C
 >- Calculamos la razón k de la homotecia a partir de la distancia d: ```k = (d-CP)/CP```
->- Realizamos la homotecia: ```P' = kxP+(1-k)xC```
+>- Realizamos la homotecia: ```P' = kxP + (1-k)xC```
 >- Calculamos los valores X y Y de los vértices y los vértices de la homotecia ```X = (P'x-P''x), Y = (P'y - Py)```
 >- Obtenemos las nuevas funciones realizando la composición de funciones de las traslaciones  ```g(x) = f(x+Y) + X```
 
+In the image, it can be seen a dialog box where the user can select the offset distance, the join type and the miter limit to define the seam allowances of the original figure. In the algorithm proposed by me these input parameters are not considered because it is not a graphic solution, is a theoretical solution using geometric operations. 
