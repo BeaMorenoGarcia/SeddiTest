@@ -10,7 +10,7 @@ class BezierPath2 {
 
     getSegment(index: number, init?: number) {
         if(!init) init = 0;
-        if(init + index > this.points.length) throw new Error('Parámetros no válidos')
+        if(init + index > this.points.length) throw new Error('Not valid parameters')
         return new BezierCurve(this.points.slice(init, init+index));
     }
 }
