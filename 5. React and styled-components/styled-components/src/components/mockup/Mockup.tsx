@@ -5,16 +5,31 @@ import { Modal } from '../../styles/modal'
 import { Title } from '../../styles/title';
 import { ModalHeader } from '../../styles/modal-header';
 
-const Mockup:React.FC = ()=> (
-  <>
-  <Modal>
-    <ModalHeader>
-      <Title>Copy to...</Title>
-    </ModalHeader>
-    <Body></Body>
-    <Footer></Footer>
-  </Modal>
-  </>
-)
+class Mockup extends React.Component {
+
+  title: string;
+  propsBody;
+  constructor(propiedades: any) {
+    super(propiedades);
+    this.title = propiedades.title;
+    this.propsBody = {
+      show: propiedades.show
+    }
+  }
+
+  render() {
+    return (
+      <>
+      <Modal>
+        <ModalHeader>
+          <Title>{this.title}</Title>
+        </ModalHeader>
+        <Body {...this.propsBody}></Body>
+        <Footer></Footer>
+      </Modal>
+      </>
+    )
+  }
+}
 
 export default Mockup;
