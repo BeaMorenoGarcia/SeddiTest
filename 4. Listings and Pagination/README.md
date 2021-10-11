@@ -27,7 +27,7 @@ In back, we receive the necessary parameters:
 
 With this parameters, we build de query (it will be something like this): 
 ```
-SELECT * FROM table ORDER BY filter LIMIT counter, 20
+SELECT * FROM table ORDER BY filter LIMIT 20 OFFSET (counter*20);
 ```
 
 This solution should not have problem with different screen sizes because it works based on screen size and window size.
