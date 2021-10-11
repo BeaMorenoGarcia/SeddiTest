@@ -27,9 +27,9 @@ In the solution, there are 3 react components (Mockup, Body and Footer) and 7 st
 </Mockup>
 ```
 
-The Mockup component has as props:
+The Mockup component has as output properties:
 - title: is passed to the Title styled-component.
-- show: to control which components are showed in the Body component.
+- show: to control which components are shown in the Body component.
 
 The Body component has ```{items}``` that it was a while loop to create n elements with the label and the input type checkbox. It has an input property ````{...this.propsBody}``` to control which components are showed.
 
