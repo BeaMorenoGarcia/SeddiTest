@@ -55,7 +55,7 @@ where:
 - ~~x~~  is the modulus of the difference of functions on the x-axis
 - ~~y~~  is the modulus of the difference of functions on the y-axis
 
-I leave you a link with an explained example of the calculation: 
+I leave you a link with an explained example of the calculation: [0d78b4d8c14d6c34a6ce194b826b5280.pdf](https://github.com/BeaMorenoGarcia/SeddiTest/files/7319872/0d78b4d8c14d6c34a6ce194b826b5280.pdf)
 
 Finally, the algorithm that I propose would be:
 Let F be the region defined by the functions f(x), g(x)...:
