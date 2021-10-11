@@ -1,4 +1,4 @@
-# 6. React Components & UI Reusability
+# 5. React and styled-components
 
 In the solution, there are 3 react components (Mockup, Body and Footer) and 7 styled-components (Button, Checkbox, Label, Modal-Header, Modal-Body, Modal an Title). The composition is something like this:
 ``` 
