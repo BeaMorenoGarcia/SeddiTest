@@ -1,20 +1,22 @@
 # 6. React Components & UI Reusability
 
-We can reuse most of the components, both React and Styled components, except the Body component, since it contains the specific components for the other example.
+We can reuse most of the components:
 
 The new component would have a similar structure to this:
 ```
+<Mockup {...props}>
   <Modal>
     <ModalHeader>
-      <Title>New Collection</Title>
+      <Title>{this.title}</Title>
     </ModalHeader>
-    <BodyNEW>                             {/*New Component*/}
-      <ModalBody>
+    <Body>
+      <ModalBody {...this.propsBody}>
         <InputFile></InputFile>           {/*New Component*/}
         <Input></Input>                   {/*New Component*/}
         <InputTextArea></InputTextArea>   {/*New Component*/}
+        <InputUser></InputUser>           {/*New Component*/}
       </ModalBody>
-    <BodyNEW>
+    <Body>
     <Footer>
       <div className = {'footer'}>
           <Button color = "grey">Cancel</Button>
@@ -22,6 +24,11 @@ The new component would have a similar structure to this:
       </div>
     </Footer>
   </Modal>
+</Mockup>
 ```
 
-As we can see, we have to create only one React component, for the new body, and 3 styled-components, one for every input type (file, text and text area).
+When we call the Mockup Component we have to pass as properties:
+- title: the title of the modal.
+- show: it has a false value.
+
+As we can see, we have to create only 4 styled-components, one for every input type (file, text and text area) and the list of users.
