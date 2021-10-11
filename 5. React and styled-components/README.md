@@ -30,5 +30,7 @@ In the solution, there are 3 react components (Mockup, Body and Footer) and 7 st
 The Mockup component has as props:
 - title: is passed to the Title styled-component.
 - show: to control which components are showed in the Body component.
+
 The Body component has ```{items}``` that it was a while loop to create n elements with the label and the input type checkbox. It has an input property ````{...this.propsBody}``` to control which components are showed.
+
 The styled-component Button receives a color prop that is used in the border and color CSS properties. This component has a pseudo-class "hover" to change the style when the user position the pointer over it.
