@@ -14,7 +14,7 @@ The new component would have a similar structure to this:
         <InputFile></InputFile>           {/*New Component*/}
         <Input></Input>                   {/*New Component*/}
         <InputTextArea></InputTextArea>   {/*New Component*/}
-        <InputUser></InputUser>           {/*New Component*/}
+        <ListUser></ListUser>             {/*New Component*/}
       </ModalBody>
     <Body>
     <Footer>
